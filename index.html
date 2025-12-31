@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matthew Karsten | Author</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Georgia', serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            min-height: 100vh;
+            color: #f0f0f0;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+        .author-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            padding: 50px;
+            text-align: center;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .author-photo {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid rgba(255, 255, 255, 0.2);
+            margin-bottom: 30px;
+        }
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            font-weight: 400;
+            letter-spacing: 2px;
+        }
+        .tagline {
+            color: #a0a0a0;
+            font-style: italic;
+            margin-bottom: 30px;
+            font-size: 1.1rem;
+        }
+        .bio {
+            max-width: 600px;
+            margin: 0 auto 40px;
+            color: #d0d0d0;
+        }
+        .section-title {
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 20px;
+            color: #888;
+        }
+        .contact-info {
+            margin-top: 40px;
+            padding-top: 40px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .contact-email {
+            display: inline-block;
+            color: #7eb8da;
+            text-decoration: none;
+            font-size: 1.1rem;
+            padding: 12px 30px;
+            border: 1px solid #7eb8da;
+            border-radius: 30px;
+            transition: all 0.3s ease;
+        }
+        .contact-email:hover {
+            background: #7eb8da;
+            color: #1a1a2e;
+        }
+        footer {
+            margin-top: 50px;
+            text-align: center;
+            color: #666;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="author-card">
+            <img src="photo.jpg" alt="Matthew Karsten" class="author-photo">
+
+            <h1>Matthew Karsten</h1>
+            <p class="tagline">Author</p>
+
+            <div class="bio">
+                <p>Welcome to my author page. Here you'll find information about my published works and how to get in touch for support or inquiries.</p>
+            </div>
+
+            <div class="contact-info">
+                <p class="section-title">Contact & Support</p>
+                <a href="mailto:matthew@purplesquirrel.media" class="contact-email">matthew@purplesquirrel.media</a>
+            </div>
+        </div>
+
+        <footer>
+            <p>&copy; 2025 Matthew Karsten. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
