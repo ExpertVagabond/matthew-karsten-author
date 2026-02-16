@@ -4,541 +4,135 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Matthew Karsten | Author, Editor & Publisher</title>
-    <meta name="description" content="Matthew Karsten — Author, editor and founder of Purple Squirrel Media. Books on travel, crypto, AI, and creative storytelling.">
-    <meta property="og:title" content="Matthew Karsten | Author, Editor & Publisher">
-    <meta property="og:description" content="Books on travel, crypto, AI, and creative storytelling. Founder of Purple Squirrel Media.">
+    <meta name="description" content="Matthew Karsten writes about travel, crypto security, and AI development. Founder of Purple Squirrel Media.">
+    <meta property="og:title" content="Matthew Karsten — Author, Editor & Publisher">
+    <meta property="og:description" content="Books on travel, crypto, AI, and creative storytelling.">
     <meta property="og:image" content="photo.jpg">
-    <meta property="og:type" content="profile">
-    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>MK</text></svg>">
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: 'Georgia', serif;
-            background: #0d1117;
-            color: #e6edf3;
-            line-height: 1.7;
-        }
-        .container {
-            max-width: 960px;
-            margin: 0 auto;
-            padding: 60px 24px;
-        }
-
-        /* Hero */
-        .hero {
-            text-align: center;
-            padding: 60px 0 40px;
-        }
-        .author-photo {
-            width: 160px;
-            height: 160px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 3px solid rgba(126, 184, 218, 0.4);
-            margin-bottom: 28px;
-        }
-        h1 {
-            font-size: 2.6rem;
-            font-weight: 400;
-            letter-spacing: 1px;
-            margin-bottom: 8px;
-        }
-        .subtitle {
-            color: #7eb8da;
-            font-size: 1.1rem;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            margin-bottom: 24px;
-        }
-        .bio {
-            max-width: 640px;
-            margin: 0 auto;
-            color: #8b949e;
-            font-size: 1.05rem;
-        }
-        .social-row {
-            display: flex;
-            justify-content: center;
-            gap: 14px;
-            margin-top: 28px;
-            flex-wrap: wrap;
-        }
-        .social-pill {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            color: #7eb8da;
-            text-decoration: none;
-            padding: 8px 18px;
-            border: 1px solid rgba(126, 184, 218, 0.25);
-            border-radius: 24px;
-            font-size: 0.9rem;
-            transition: all 0.2s;
-        }
-        .social-pill:hover {
-            background: rgba(126, 184, 218, 0.1);
-            border-color: #7eb8da;
-        }
-        .social-pill svg { width: 16px; height: 16px; fill: currentColor; }
-
-        /* Sections */
-        .section {
-            margin-top: 56px;
-        }
-        .section-label {
-            font-size: 0.8rem;
-            text-transform: uppercase;
-            letter-spacing: 4px;
-            color: #7eb8da;
-            margin-bottom: 8px;
-        }
-        .section-title {
-            font-size: 1.6rem;
-            font-weight: 400;
-            margin-bottom: 32px;
-            padding-bottom: 16px;
-            border-bottom: 1px solid rgba(255,255,255,0.08);
-        }
-
-        /* Book Cards */
-        .books-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-            gap: 24px;
-        }
-        .book-card {
-            background: rgba(255,255,255,0.03);
-            border: 1px solid rgba(255,255,255,0.08);
-            border-radius: 12px;
-            overflow: hidden;
-            transition: transform 0.2s, border-color 0.2s;
-        }
-        .book-card:hover {
-            transform: translateY(-2px);
-            border-color: rgba(126, 184, 218, 0.3);
-        }
-        .book-cover {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-            background: rgba(255,255,255,0.02);
-        }
-        .book-info {
-            padding: 20px;
-        }
-        .book-title {
-            font-size: 1.1rem;
-            font-weight: 600;
-            margin-bottom: 4px;
-        }
-        .book-author {
-            font-size: 0.85rem;
-            color: #8b949e;
-            margin-bottom: 10px;
-        }
-        .book-desc {
-            font-size: 0.88rem;
-            color: #8b949e;
-            margin-bottom: 14px;
-            display: -webkit-box;
-            -webkit-line-clamp: 3;
-            -webkit-box-orient: vertical;
-            overflow: hidden;
-        }
-        .book-meta {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            flex-wrap: wrap;
-        }
-        .badge {
-            display: inline-block;
-            padding: 3px 10px;
-            border-radius: 12px;
-            font-size: 0.75rem;
-            font-weight: 600;
-            letter-spacing: 0.5px;
-        }
-        .badge-live {
-            background: rgba(46, 160, 67, 0.15);
-            color: #3fb950;
-            border: 1px solid rgba(46, 160, 67, 0.3);
-        }
-        .badge-publishing {
-            background: rgba(210, 153, 34, 0.15);
-            color: #d29922;
-            border: 1px solid rgba(210, 153, 34, 0.3);
-        }
-        .badge-draft {
-            background: rgba(139, 148, 158, 0.1);
-            color: #8b949e;
-            border: 1px solid rgba(139, 148, 158, 0.2);
-        }
-        .badge-print {
-            background: rgba(126, 184, 218, 0.12);
-            color: #7eb8da;
-            border: 1px solid rgba(126, 184, 218, 0.25);
-        }
-        .book-links {
-            margin-top: 12px;
-            display: flex;
-            gap: 8px;
-            flex-wrap: wrap;
-        }
-        .book-link {
-            font-size: 0.8rem;
-            color: #7eb8da;
-            text-decoration: none;
-            padding: 4px 12px;
-            border: 1px solid rgba(126, 184, 218, 0.25);
-            border-radius: 14px;
-            transition: all 0.2s;
-        }
-        .book-link:hover {
-            background: rgba(126, 184, 218, 0.12);
-        }
-
-        /* Role label */
-        .role-tag {
-            display: inline-block;
-            font-size: 0.7rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            padding: 2px 8px;
-            border-radius: 4px;
-            margin-bottom: 6px;
-        }
-        .role-author { background: rgba(126, 184, 218, 0.12); color: #7eb8da; }
-        .role-editor { background: rgba(210, 153, 34, 0.12); color: #d29922; }
-        .role-curator { background: rgba(163, 113, 247, 0.12); color: #a371f7; }
-
-        /* Stats */
-        .stats-row {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-            gap: 16px;
-            margin-bottom: 40px;
-        }
-        .stat-card {
-            text-align: center;
-            padding: 20px;
-            background: rgba(255,255,255,0.03);
-            border: 1px solid rgba(255,255,255,0.06);
-            border-radius: 10px;
-        }
-        .stat-number {
-            font-size: 2rem;
-            font-weight: 300;
-            color: #7eb8da;
-        }
-        .stat-label {
-            font-size: 0.8rem;
-            color: #8b949e;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        /* FAQ */
-        .faq-item {
-            padding: 20px 0;
-            border-bottom: 1px solid rgba(255,255,255,0.06);
-        }
-        .faq-item:last-child { border-bottom: none; }
-        .faq-q { font-weight: 600; margin-bottom: 8px; }
-        .faq-a { color: #8b949e; font-size: 0.95rem; }
-
-        /* Contact */
-        .contact-section {
-            text-align: center;
-            margin-top: 56px;
-            padding: 48px 24px;
-            background: rgba(255,255,255,0.02);
-            border: 1px solid rgba(255,255,255,0.06);
-            border-radius: 12px;
-        }
-        .contact-email {
-            display: inline-block;
-            color: #7eb8da;
-            text-decoration: none;
-            font-size: 1.05rem;
-            padding: 12px 32px;
-            border: 1px solid rgba(126, 184, 218, 0.3);
-            border-radius: 28px;
-            transition: all 0.2s;
-            margin-top: 12px;
-        }
-        .contact-email:hover {
-            background: #7eb8da;
-            color: #0d1117;
-        }
-        footer {
-            text-align: center;
-            color: #484f58;
-            font-size: 0.85rem;
-            margin-top: 48px;
-            padding-top: 24px;
-            border-top: 1px solid rgba(255,255,255,0.06);
-        }
-        footer a { color: #7eb8da; text-decoration: none; }
-
-        @media (max-width: 600px) {
-            .container { padding: 32px 16px; }
-            h1 { font-size: 2rem; }
-            .books-grid { grid-template-columns: 1fr; }
-            .stats-row { grid-template-columns: repeat(2, 1fr); }
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-
-        <!-- Hero -->
-        <div class="hero">
-            <img src="photo.jpg" alt="Matthew Karsten" class="author-photo">
-            <h1>Matthew Karsten</h1>
-            <p class="subtitle">Author &middot; Editor &middot; Publisher</p>
-            <div class="bio">
-                <p>Writer, publisher, and founder of <strong>Purple Squirrel Media</strong>. I write about travel, crypto security, and AI-powered development. I also edit and publish books for other authors across technology, art, and creative storytelling.</p>
+    <nav class="nav">
+        <div class="nav-inner">
+            <a href="index.html" class="nav-brand">MK</a>
+            <div class="nav-links">
+                <a href="index.html" class="active">Home</a>
+                <a href="books.html">Books</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
             </div>
-            <div class="social-row">
-                <a href="https://instagram.com/americanmonks" target="_blank" class="social-pill">
-                    <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-                    @americanmonks
-                </a>
-                <a href="https://twitter.com/expertvagabond" target="_blank" class="social-pill">
-                    <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-                    @expertvagabond
-                </a>
-                <a href="https://github.com/ExpertVagabond" target="_blank" class="social-pill">
-                    <svg viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-                    GitHub
-                </a>
+            <button class="nav-toggle" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="hero-content">
+            <p class="hero-label">Author &middot; Editor &middot; Publisher</p>
+            <h1 class="hero-title">Matthew<br>Karsten</h1>
+            <p class="hero-sub">I write books about the things that matter — crypto security, AI-powered development, and seeing the world. I also help other authors bring their stories to life through <strong>Purple Squirrel Media</strong>.</p>
+            <div class="hero-actions">
+                <a href="books.html" class="btn btn-primary">Browse Books</a>
+                <a href="about.html" class="btn btn-ghost">About Me</a>
             </div>
         </div>
+        <div class="hero-portrait">
+            <img src="photo.jpg" alt="Matthew Karsten" loading="eager">
+        </div>
+    </section>
 
-        <!-- Stats -->
-        <div class="stats-row">
-            <div class="stat-card">
-                <div class="stat-number">10</div>
-                <div class="stat-label">Books</div>
+    <!-- Featured Books -->
+    <section class="section" id="featured">
+        <div class="section-header">
+            <span class="section-tag">Featured</span>
+            <h2>Latest Books</h2>
+        </div>
+        <div class="featured-grid">
+            <a href="books.html#crypto-survival-guide" class="featured-card">
+                <div class="featured-cover">
+                    <img src="covers/crypto-survival-guide.png" alt="The Crypto Survival Guide" loading="lazy">
+                    <span class="status-dot live"></span>
+                </div>
+                <div class="featured-info">
+                    <span class="featured-badge live">Available Now</span>
+                    <h3>The Crypto Survival Guide</h3>
+                    <p>Protecting Your Assets in the Digital Economy</p>
+                </div>
+            </a>
+            <a href="books.html#roger-ramjett" class="featured-card">
+                <div class="featured-cover">
+                    <img src="covers/roger-ramjett.jpg" alt="Roger Ramjett and S.T.A.R." loading="lazy">
+                    <span class="status-dot live"></span>
+                </div>
+                <div class="featured-info">
+                    <span class="featured-badge live">Available Now</span>
+                    <h3>Roger Ramjett and S.T.A.R.</h3>
+                    <p>by Steven Karsten &middot; Edited by Matthew Karsten</p>
+                </div>
+            </a>
+            <a href="books.html#budget-traveler" class="featured-card">
+                <div class="featured-cover">
+                    <img src="covers/budget-traveler.jpg" alt="The Budget Traveler's Handbook" loading="lazy">
+                    <span class="status-dot pub"></span>
+                </div>
+                <div class="featured-info">
+                    <span class="featured-badge pub">Publishing</span>
+                    <h3>The Budget Traveler's Handbook</h3>
+                    <p>Seeing the World Without Breaking the Bank</p>
+                </div>
+            </a>
+        </div>
+        <div class="section-footer">
+            <a href="books.html" class="link-arrow">View all 10 books &rarr;</a>
+        </div>
+    </section>
+
+    <!-- Stats Strip -->
+    <section class="stats-strip">
+        <div class="stat"><span class="stat-n">10</span><span class="stat-l">Books</span></div>
+        <div class="stat"><span class="stat-n">5</span><span class="stat-l">Authors</span></div>
+        <div class="stat"><span class="stat-n">6</span><span class="stat-l">Languages</span></div>
+        <div class="stat"><span class="stat-n">4</span><span class="stat-l">Platforms</span></div>
+    </section>
+
+    <!-- About Teaser -->
+    <section class="section about-teaser">
+        <div class="about-teaser-text">
+            <span class="section-tag">Publisher</span>
+            <h2>Purple Squirrel Media</h2>
+            <p>Independent publishing house specializing in illustrated books, technology guides, and creative storytelling. We publish across Amazon KDP, Apple Books, Google Play Books, and direct channels.</p>
+            <a href="about.html" class="link-arrow">Learn more &rarr;</a>
+        </div>
+        <div class="about-teaser-logos">
+            <div class="platform-pill">Amazon KDP</div>
+            <div class="platform-pill">Apple Books</div>
+            <div class="platform-pill">Google Play</div>
+            <div class="platform-pill">Gumroad</div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <div class="footer-col">
+                <p class="footer-brand">Matthew Karsten</p>
+                <p class="footer-sub">Purple Squirrel Media</p>
             </div>
-            <div class="stat-card">
-                <div class="stat-number">5</div>
-                <div class="stat-label">Authors</div>
+            <div class="footer-col">
+                <a href="books.html">Books</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
             </div>
-            <div class="stat-card">
-                <div class="stat-number">5</div>
-                <div class="stat-label">Languages</div>
-            </div>
-            <div class="stat-card">
-                <div class="stat-number">4</div>
-                <div class="stat-label">Platforms</div>
+            <div class="footer-col">
+                <a href="https://twitter.com/expertvagabond" target="_blank">X / Twitter</a>
+                <a href="https://instagram.com/americanmonks" target="_blank">Instagram</a>
+                <a href="https://github.com/ExpertVagabond" target="_blank">GitHub</a>
             </div>
         </div>
+        <p class="footer-copy">&copy; 2026 Matthew Karsten. All rights reserved.</p>
+    </footer>
 
-        <!-- My Books -->
-        <div class="section">
-            <p class="section-label">Written by</p>
-            <h2 class="section-title">My Books</h2>
-            <div class="books-grid">
-
-                <div class="book-card">
-                    <img src="covers/crypto-survival-guide.jpg" alt="The Crypto Survival Guide" class="book-cover">
-                    <div class="book-info">
-                        <span class="role-tag role-author">Author</span>
-                        <p class="book-title">The Crypto Survival Guide</p>
-                        <p class="book-desc">Protecting your assets in the digital economy. Covers self-custody, hardware wallets, SIM swapping, AI phishing, and estate planning for crypto holders.</p>
-                        <div class="book-meta">
-                            <span class="badge badge-live">Kindle Live</span>
-                            <span class="badge badge-live">Paperback Live</span>
-                        </div>
-                        <div class="book-links">
-                            <a href="https://www.amazon.com/dp/B0GF5YPZ9H" target="_blank" class="book-link">Amazon Kindle</a>
-                            <a href="https://www.amazon.com/dp/B0GF5X23KP" target="_blank" class="book-link">Paperback</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="book-card">
-                    <img src="covers/budget-traveler.jpg" alt="The Budget Traveler's Handbook" class="book-cover">
-                    <div class="book-info">
-                        <span class="role-tag role-author">Author</span>
-                        <p class="book-title">The Budget Traveler's Handbook</p>
-                        <p class="book-desc">Seeing the world without breaking the bank. Practical strategies for affordable travel, from flights and accommodation to food and experiences.</p>
-                        <div class="book-meta">
-                            <span class="badge badge-publishing">Publishing</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="book-card">
-                    <img src="covers/claude-handbook.jpg" alt="The Claude Handbook" class="book-cover">
-                    <div class="book-info">
-                        <span class="role-tag role-author">Author</span>
-                        <p class="book-title">The Claude Handbook</p>
-                        <p class="book-desc">Build agentic AI systems with Anthropic's Claude. The definitive guide to building autonomous AI agents with the Model Context Protocol.</p>
-                        <div class="book-meta">
-                            <span class="badge badge-draft">Coming Soon</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="book-card">
-                    <img src="covers/ship-faster-with-ai.jpg" alt="Ship Faster with AI" class="book-cover">
-                    <div class="book-info">
-                        <span class="role-tag role-author">Author</span>
-                        <p class="book-title">Ship Faster with AI</p>
-                        <p class="book-desc">The developer's guide to AI-powered productivity. 10x your development speed with AI-assisted coding, debugging, and deployment.</p>
-                        <div class="book-meta">
-                            <span class="badge badge-draft">Coming Soon</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="book-card">
-                    <img src="covers/prompt-engineering.jpg" alt="Prompt Engineering Mastery" class="book-cover">
-                    <div class="book-info">
-                        <span class="role-tag role-author">Author</span>
-                        <p class="book-title">Prompt Engineering Mastery</p>
-                        <p class="book-desc">The complete guide to AI communication. Five essential prompt engineering resources in one definitive manual for developers, professionals, and creatives.</p>
-                        <div class="book-meta">
-                            <span class="badge badge-draft">Coming Soon</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="book-card">
-                    <img src="covers/land-the-job.jpg" alt="Land the Job" class="book-cover">
-                    <div class="book-info">
-                        <span class="role-tag role-author">Author</span>
-                        <p class="book-title">Land the Job</p>
-                        <p class="book-desc">AI-powered job search and career acceleration. Use AI to automate your search, personalize outreach at scale, and stand out from the crowd.</p>
-                        <div class="book-meta">
-                            <span class="badge badge-draft">Coming Soon</span>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-
-        <!-- Edited & Published -->
-        <div class="section">
-            <p class="section-label">Edited & Published</p>
-            <h2 class="section-title">Other Authors</h2>
-            <div class="books-grid">
-
-                <div class="book-card">
-                    <img src="covers/roger-ramjett.jpg" alt="Roger Ramjett and S.T.A.R." class="book-cover">
-                    <div class="book-info">
-                        <span class="role-tag role-editor">Editor</span>
-                        <p class="book-title">Roger Ramjett and S.T.A.R.</p>
-                        <p class="book-author">by Steven Karsten</p>
-                        <p class="book-desc">Dawn of a New Day. A beautifully illustrated story of courage, legacy, and hope in a post-apocalyptic future. For readers of all ages.</p>
-                        <div class="book-meta">
-                            <span class="badge badge-live">Kindle Live</span>
-                            <span class="badge badge-publishing">Paperback In Review</span>
-                        </div>
-                        <div class="book-links">
-                            <a href="https://www.amazon.com/dp/B0GM8M41GP" target="_blank" class="book-link">Amazon Kindle</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="book-card">
-                    <img src="covers/art-on-the-moon.jpg" alt="Art on the Moon" class="book-cover">
-                    <div class="book-info">
-                        <span class="role-tag role-editor">Editor</span>
-                        <p class="book-title">Art on the Moon</p>
-                        <p class="book-author">Curated by Scarlett Arana / BitBasel</p>
-                        <p class="book-desc">Preserving Art for a Billion Years. 22 CryptoArt for Impact winners from the Lunaprise Moon Museum. 88-page hardcover art book.</p>
-                        <div class="book-meta">
-                            <span class="badge badge-print">Print Ready</span>
-                        </div>
-                        <div class="book-links">
-                            <a href="https://art-on-the-moon.pages.dev" target="_blank" class="book-link">Preview Site</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="book-card">
-                    <img src="covers/nick-spanos.jpg" alt="This Is a Monetary Revolution" class="book-cover">
-                    <div class="book-info">
-                        <span class="role-tag role-editor">Editor</span>
-                        <p class="book-title">This Is a Monetary Revolution</p>
-                        <p class="book-author">by Nick Spanos</p>
-                        <p class="book-desc">A thought leadership series on monetary independence, blockchain voting, and the fight for financial freedom. By the founder of Bitcoin Center NYC.</p>
-                        <div class="book-meta">
-                            <span class="badge badge-publishing">PDF + EPUB</span>
-                        </div>
-                        <div class="book-links">
-                            <a href="https://nickspanos.pages.dev" target="_blank" class="book-link">Read Online</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="book-card">
-                    <img src="covers/teresa-castagnino.jpg" alt="The Architecture of Perception" class="book-cover">
-                    <div class="book-info">
-                        <span class="role-tag role-editor">Editor</span>
-                        <p class="book-title">The Architecture of Perception</p>
-                        <p class="book-author">by Teresa Castagnino</p>
-                        <p class="book-desc">A bilingual thought leadership series on perception, structural narratives, and designing the systems that shape adoption. Spanish and English.</p>
-                        <div class="book-meta">
-                            <span class="badge badge-publishing">PDF + EPUB</span>
-                        </div>
-                        <div class="book-links">
-                            <a href="https://teresacastagnino.pages.dev" target="_blank" class="book-link">Read Online</a>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-
-        <!-- About PSM -->
-        <div class="section">
-            <p class="section-label">Publisher</p>
-            <h2 class="section-title">Purple Squirrel Media</h2>
-            <p style="color: #8b949e; max-width: 640px;">Independent publishing house specializing in illustrated books, digital media, technology guides, and creative storytelling. We publish across Amazon KDP, Apple Books, Google Play Books, and direct channels.</p>
-            <div style="margin-top: 20px; display: flex; gap: 12px; flex-wrap: wrap;">
-                <a href="https://purplesquirrelmedia.io" target="_blank" class="book-link" style="font-size: 0.9rem; padding: 8px 16px;">purplesquirrelmedia.io</a>
-            </div>
-        </div>
-
-        <!-- FAQ -->
-        <div class="section">
-            <p class="section-label">Support</p>
-            <h2 class="section-title">Frequently Asked Questions</h2>
-            <div class="faq-item">
-                <p class="faq-q">How do I download my eBook?</p>
-                <p class="faq-a">After purchase, you'll receive a download link via email. For Apple Books, the book will appear in your library automatically. For Kindle, it will be delivered to your registered device.</p>
-            </div>
-            <div class="faq-item">
-                <p class="faq-q">Are print editions available?</p>
-                <p class="faq-a">The Crypto Survival Guide and Roger Ramjett are available in paperback on Amazon. Art on the Moon is being prepared as a hardcover art book. More print editions are coming.</p>
-            </div>
-            <div class="faq-item">
-                <p class="faq-q">Can I get a refund?</p>
-                <p class="faq-a">Refunds are handled by the platform where you purchased the book (Apple Books, Amazon Kindle, etc.). Please contact their support directly.</p>
-            </div>
-            <div class="faq-item">
-                <p class="faq-q">Are translations available?</p>
-                <p class="faq-a">The Crypto Survival Guide is available in Japanese, Portuguese, German, French, and Spanish. The Architecture of Perception is bilingual (Spanish/English). More translations are planned.</p>
-            </div>
-        </div>
-
-        <!-- Contact -->
-        <div class="contact-section">
-            <p class="section-label">Get in Touch</p>
-            <p style="color: #8b949e; margin-top: 8px;">For publishing inquiries, collaborations, or support</p>
-            <a href="mailto:MatthewKarstenConnects@gmail.com" class="contact-email">MatthewKarstenConnects@gmail.com</a>
-        </div>
-
-        <footer>
-            <p>&copy; 2026 Matthew Karsten &middot; <a href="https://purplesquirrelmedia.io">Purple Squirrel Media</a></p>
-        </footer>
-
-    </div>
+    <script src="nav.js"></script>
 </body>
 </html>

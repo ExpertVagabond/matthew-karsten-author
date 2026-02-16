@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Books | Matthew Karsten</title>
+    <meta name="description" content="Browse all books by Matthew Karsten and Purple Squirrel Media. Crypto, travel, AI development, and creative storytelling.">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="nav">
+        <div class="nav-inner">
+            <a href="index.html" class="nav-brand">MK</a>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="books.html" class="active">Books</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <button class="nav-toggle" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <div class="page-header">
+        <h1>Books</h1>
+        <p>Titles I've written, edited, and published through Purple Squirrel Media.</p>
+    </div>
+
+    <div class="filter-row">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="author">My Books</button>
+        <button class="filter-btn" data-filter="editor">Edited &amp; Published</button>
+    </div>
+
+    <div class="book-list">
+
+        <!-- === MY BOOKS === -->
+
+        <div class="book-row" data-role="author" id="crypto-survival-guide">
+            <div class="book-row-cover">
+                <img src="covers/crypto-survival-guide.png" alt="The Crypto Survival Guide" loading="lazy">
+            </div>
+            <div class="book-row-body">
+                <span class="role author">Author</span>
+                <h3>The Crypto Survival Guide</h3>
+                <p class="byline">Protecting Your Assets in the Digital Economy</p>
+                <p class="desc">A practical, no-hype guide to securing cryptocurrency. Covers cold storage, wallet safety, exchange risks, and the self-custody practices that protect real money in the digital economy.</p>
+                <div class="tags">
+                    <span class="featured-badge live">Available Now</span>
+                </div>
+                <div class="book-row-links">
+                    <a href="https://www.amazon.com/dp/B0GF5YPZ9H" class="book-link primary" target="_blank">Kindle</a>
+                    <a href="https://www.amazon.com/dp/B0GF5X23KP" class="book-link outline" target="_blank">Paperback</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="book-row" data-role="author" id="budget-traveler">
+            <div class="book-row-cover">
+                <img src="covers/budget-traveler.jpg" alt="The Budget Traveler's Handbook" loading="lazy">
+            </div>
+            <div class="book-row-body">
+                <span class="role author">Author</span>
+                <h3>The Budget Traveler's Handbook</h3>
+                <p class="byline">Seeing the World Without Breaking the Bank</p>
+                <p class="desc">After visiting 50+ countries on a budget, this guide covers everything from finding cheap flights and scoring budget accommodation to eating well for less and experiencing destinations like a local.</p>
+                <div class="tags">
+                    <span class="featured-badge pub">Publishing</span>
+                </div>
+                <div class="book-row-links">
+                    <span class="book-link outline" style="cursor:default;opacity:0.5;">Coming Soon</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="book-row" data-role="author" id="claude-handbook">
+            <div class="book-row-cover">
+                <img src="covers/claude-handbook.png" alt="The Claude Handbook" loading="lazy">
+            </div>
+            <div class="book-row-body">
+                <span class="role author">Author</span>
+                <h3>The Claude Handbook</h3>
+                <p class="byline">Building with Anthropic's AI from Day One</p>
+                <p class="desc">A developer-focused guide to Claude Code, the Anthropic API, prompt engineering, and building production AI applications. From first API call to shipping real products.</p>
+                <div class="tags">
+                    <span class="featured-badge draft">In Progress</span>
+                </div>
+                <div class="book-row-links">
+                    <span class="book-link outline" style="cursor:default;opacity:0.5;">Coming Soon</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="book-row" data-role="author" id="ship-faster">
+            <div class="book-row-cover">
+                <img src="covers/ship-faster-with-ai.png" alt="Ship Faster with AI" loading="lazy">
+            </div>
+            <div class="book-row-body">
+                <span class="role author">Author</span>
+                <h3>Ship Faster with AI</h3>
+                <p class="byline">An Engineer's Guide to AI-Powered Development</p>
+                <p class="desc">How to integrate AI tools into your development workflow to ship software faster. Covers code generation, testing, CI/CD automation, and the practical realities of AI-assisted engineering.</p>
+                <div class="tags">
+                    <span class="featured-badge draft">In Progress</span>
+                </div>
+                <div class="book-row-links">
+                    <span class="book-link outline" style="cursor:default;opacity:0.5;">Coming Soon</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="book-row" data-role="author" id="prompt-engineering">
+            <div class="book-row-cover">
+                <img src="covers/prompt-engineering.png" alt="Prompt Engineering Mastery" loading="lazy">
+            </div>
+            <div class="book-row-body">
+                <span class="role author">Author</span>
+                <h3>Prompt Engineering Mastery</h3>
+                <p class="byline">Getting Better Results from Any AI Model</p>
+                <p class="desc">A practical handbook for writing effective prompts. Covers system prompts, chain-of-thought reasoning, tool use, and the techniques that separate good AI outputs from great ones.</p>
+                <div class="tags">
+                    <span class="featured-badge draft">In Progress</span>
+                </div>
+                <div class="book-row-links">
+                    <span class="book-link outline" style="cursor:default;opacity:0.5;">Coming Soon</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="book-row" data-role="author" id="land-the-job">
+            <div class="book-row-cover">
+                <img src="covers/land-the-job.png" alt="Land the Job" loading="lazy">
+            </div>
+            <div class="book-row-body">
+                <span class="role author">Author</span>
+                <h3>Land the Job</h3>
+                <p class="byline">The Modern Job Search Playbook</p>
+                <p class="desc">Strategies for standing out in today's job market. Covers resume optimization, interview preparation, networking, salary negotiation, and leveraging AI tools in your job search.</p>
+                <div class="tags">
+                    <span class="featured-badge draft">In Progress</span>
+                </div>
+                <div class="book-row-links">
+                    <span class="book-link outline" style="cursor:default;opacity:0.5;">Coming Soon</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- === EDITED & PUBLISHED === -->
+
+        <div class="book-row" data-role="editor" id="roger-ramjett">
+            <div class="book-row-cover">
+                <img src="covers/roger-ramjett.jpg" alt="Roger Ramjett and S.T.A.R." loading="lazy">
+            </div>
+            <div class="book-row-body">
+                <span class="role editor">Editor &amp; Publisher</span>
+                <h3>Roger Ramjett and S.T.A.R.</h3>
+                <p class="byline">by Steven Karsten</p>
+                <p class="desc">A military science fiction novel following ace pilot Roger Ramjett and the elite S.T.A.R. unit. Action, intrigue, and the bonds forged in combat among the stars.</p>
+                <div class="tags">
+                    <span class="featured-badge live">Available Now</span>
+                </div>
+                <div class="book-row-links">
+                    <a href="https://www.amazon.com/dp/B0GM8M41GP" class="book-link primary" target="_blank">Kindle</a>
+                    <a href="https://play.google.com/store/books/details?id=EY7LGJJY2LN" class="book-link outline" target="_blank">Google Play</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="book-row" data-role="editor" id="art-on-the-moon">
+            <div class="book-row-cover">
+                <img src="covers/art-on-the-moon.jpg" alt="Art on the Moon" loading="lazy">
+            </div>
+            <div class="book-row-body">
+                <span class="role editor">Editor &amp; Publisher</span>
+                <h3>Art on the Moon</h3>
+                <p class="byline">SDG Edition &middot; Curated by Scarlett Arana / BitBasel</p>
+                <p class="desc">22 CryptoArt for Impact artists from the Lunaprise Moon Museum. An illustrated hardcover celebrating the intersection of digital art, sustainability, and the UN Sustainable Development Goals.</p>
+                <div class="tags">
+                    <span class="featured-badge print">Print Ready</span>
+                </div>
+                <div class="book-row-links">
+                    <span class="book-link outline" style="cursor:default;opacity:0.5;">Awaiting ISBN</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="book-row" data-role="editor" id="monetary-revolution">
+            <div class="book-row-cover">
+                <img src="covers/nick-spanos.jpg" alt="This Is a Monetary Revolution" loading="lazy">
+            </div>
+            <div class="book-row-body">
+                <span class="role editor">Editor &amp; Publisher</span>
+                <h3>This Is a Monetary Revolution</h3>
+                <p class="byline">by Nick Spanos</p>
+                <p class="desc">From the founder of Bitcoin Center NYC, a firsthand account of the cryptocurrency revolution. Policy, philosophy, and the fight for financial sovereignty.</p>
+                <div class="tags">
+                    <span class="featured-badge pub">Publishing</span>
+                </div>
+                <div class="book-row-links">
+                    <span class="book-link outline" style="cursor:default;opacity:0.5;">Coming Soon</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="book-row" data-role="editor" id="architecture-of-perception">
+            <div class="book-row-cover">
+                <img src="covers/teresa-castagnino.jpg" alt="The Architecture of Perception" loading="lazy">
+            </div>
+            <div class="book-row-body">
+                <span class="role editor">Editor &amp; Publisher</span>
+                <h3>The Architecture of Perception</h3>
+                <p class="byline">by Teresa Castagnino</p>
+                <p class="desc">A bilingual thought leadership series exploring design thinking, perceptual frameworks, and the systems that shape how we see and build the world. English and Spanish.</p>
+                <div class="tags">
+                    <span class="featured-badge pub">Publishing</span>
+                </div>
+                <div class="book-row-links">
+                    <span class="book-link outline" style="cursor:default;opacity:0.5;">Coming Soon</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <div class="footer-col">
+                <p class="footer-brand">Matthew Karsten</p>
+                <p class="footer-sub">Purple Squirrel Media</p>
+            </div>
+            <div class="footer-col">
+                <a href="books.html">Books</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="footer-col">
+                <a href="https://twitter.com/expertvagabond" target="_blank">X / Twitter</a>
+                <a href="https://instagram.com/americanmonks" target="_blank">Instagram</a>
+                <a href="https://github.com/ExpertVagabond" target="_blank">GitHub</a>
+            </div>
+        </div>
+        <p class="footer-copy">&copy; 2026 Matthew Karsten. All rights reserved.</p>
+    </footer>
+
+    <script src="nav.js"></script>
+    <script>
+    document.querySelectorAll('.filter-btn').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+            document.querySelectorAll('.filter-btn').forEach(function(b) { b.classList.remove('active'); });
+            btn.classList.add('active');
+            var filter = btn.dataset.filter;
+            document.querySelectorAll('.book-row').forEach(function(row) {
+                if (filter === 'all' || row.dataset.role === filter) {
+                    row.style.display = '';
+                } else {
+                    row.style.display = 'none';
+                }
+            });
+        });
+    });
+    </script>
+</body>
+</html>
